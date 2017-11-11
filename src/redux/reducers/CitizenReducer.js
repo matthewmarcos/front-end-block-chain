@@ -1,13 +1,14 @@
 const InitialState = {
+    isFetching: false,
     citizens: [ ],
     newCitizen: {} // For add Cutuzen
 };
 
-const CitizenReducer = (state = InitialState, action) => {
+export const CitizenReducer = (state = InitialState, action) => {
     switch (action.type) {
-        case 'RECEIVE_CREATE_NEW': {
+        case 'CREATE_NEW_CITIZEN': {
             // const { id, firstName, middleName, lastName } = action.payload.user;
-            const { user } = action.payload;A
+            const { user } = action.payload;
             return {
                 ...state,
                 citizens: [
@@ -16,6 +17,14 @@ const CitizenReducer = (state = InitialState, action) => {
                 ]
             }
         }
+        break;
+        case 'FETCHED_ALL_CITIZENS': {
+
+        }
     }
-}
+
+    return {
+        ...state
+    };
+};
 

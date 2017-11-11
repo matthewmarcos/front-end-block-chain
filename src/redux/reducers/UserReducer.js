@@ -1,26 +1,28 @@
 const InitialState = {
     user : '',
-    isLoggingIn : false
 };
 
-const UserReducer = (state = InitialState, action) => {
+export const UserReducer = (state = InitialState, action) => {
     switch (action.type) {
-        case 'LOGGING_IN': {
-            return{
+        case 'LOG_IN': {
+            const { username } = action.payload;
+            return {
                 ...state,
-                isLoggingIn: true
+                user: username,
             };
         }
         break;
-        case 'LOGGED_IN': {
-            const { user } = action.payload;
+        case 'LOG_OUT': {
             return {
                 ...state,
-                user,
-                isLoggingIn: false;
+                user: '',
             };
         }
         break;
     }
+
+    return {
+        ...state
+    };
 }
 
