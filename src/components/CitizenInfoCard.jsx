@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 
 class CitizenInfoCard extends Component {
+
     render () {
         return (
             <div className="card col-sm-4">
@@ -24,7 +25,7 @@ class CitizenInfoCard extends Component {
                                 <td>{this.props.lastName}</td>
                             </tr>
                             {
-                                _.map(this.props.info, (val, key) => {
+                                _.map(JSON.parse(this.props.info), (val, key) => {
                                     return(<tr key={key}>
                                         <td>
                                             {key}
