@@ -1,13 +1,12 @@
 const InitialState = {
     isFetching: false,
-    citizens: [ ],
-    newCitizen: {} // For add Cutuzen
+    agencies: [ ],
+    newAgency: {} // For add Cutuzen
 };
 
 export const AgencyReducer = (state = InitialState, action) => {
     switch (action.type) {
         case 'CREATE_NEW_AGENCY': {
-            // const { id, firstName, middleName, lastName } = action.payload.user;
             const { user } = action.payload;
             return {
                 ...state,
@@ -19,6 +18,13 @@ export const AgencyReducer = (state = InitialState, action) => {
         }
         break;
         case 'FETCHED_ALL_AGENCIES': { 
+            const { agencies } = action.payload;
+            return {
+                ...state,
+                agencies: [
+                    ...agencies
+                ]
+            }
         }
         break;
     }

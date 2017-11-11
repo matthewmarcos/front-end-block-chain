@@ -8,6 +8,7 @@ class PapaContainer extends Component {
     componentDidMount() {
         const { dispatch } = this.props;
         dispatch(adminActions.fetchCitizens());
+        dispatch(adminActions.fetchAgencies());
     };
 
     render() {

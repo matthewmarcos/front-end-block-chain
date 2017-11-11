@@ -16,17 +16,17 @@ class AgencySettingsModal extends Component {
                             <div className="modal-body">
                                 <h2>ADD FIELD</h2>
                                 <div className="form-group">
-                                    <label for="field-metadata">Field Metadata Key</label>
+                                    <label htmlFor="field-metadata">Field Metadata Key</label>
                                     <input type="text" className="form-control" id="field-metadata" placeholder="Enter Field Metadata Key" />
                                 </div>
                                 <div className="form-group">
-                                    <label for="field-type">Field Type</label>
+                                    <label htmlFor="field-type">Field Type</label>
                                     <input type="text" className="form-control" id="field-type" placeholder="Enter Field Type" />
                                 </div>
 
                                 <h2>SHARE FIELD</h2>
                                 <div className="form-group">
-                                    <label for="field-metadata">Agency Name</label>
+                                    <label htmlFor="field-metadata">Agency Name</label>
                                     <input type="text" className="form-control" id="field-metadata" placeholder="Enter Agency Name" />
                                 </div>
                             </div>
