@@ -19,6 +19,16 @@ class App extends Component {
             <Provider key="provider" store={store}>
                 <BrowserRouter>
                     <PapaContainer>
+                        <nav className="navbar navbar-default">
+                            <div className="nav-container">
+                                <div className="navbar-header">
+                                    <a className="navbar-brand" href="#">
+                                        <span>PROJECT NARRA</span>
+                                    </a>
+                                    <p class="navbar-text">Government Transactions</p>
+                                </div>
+                            </div>
+                        </nav>
                         <Switch>
                             <Route exact path="/"><IndexContainer /></Route>
                             <Route path="/admin"><AdminContainer /></Route>
