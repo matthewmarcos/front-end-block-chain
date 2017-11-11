@@ -5,11 +5,17 @@ class AdminContainer extends Component {
         return (
             <div className="container">
                 <h1>Admin</h1>
+                <h3>ADD AGENCY</h3>
                 <form action="/api/Agency" method="POST">
-                    <div className="input-group">
-                        <input type="text" className="form-control" placeholder="Search Field" aria-describedby="search-addon" />
-                        <span className="input-group-addon" id="search-addon">TODO: SEARCH BUTTON ICON</span>
+                    <div className="form-group">
+                        <label for="agency-id">Agency ID</label>
+                        <input type="text" className="form-control" id="agency-id" placeholder="Enter Agency Name" />
+                    </div>    
+                    <div className="form-group">
+                        <label for="agency-name">Agency Name</label>
+                        <input type="text" className="form-control" id="agency-name" placeholder="Enter Agency Name" />
                     </div>
+                    <input type="submit" value="Add" />
                 </form>
             </div>
         )
