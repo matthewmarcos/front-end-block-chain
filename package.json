@@ -1,6 +1,7 @@
 {
   "name": "front-end-block-chain",
   "version": "0.1.0",
+  "proxy": "localhost:3000",
   "private": true,
   "dependencies": {
     "async": "^2.6.0",
