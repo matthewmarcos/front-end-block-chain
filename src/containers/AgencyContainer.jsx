@@ -14,6 +14,7 @@ class AgencyContainer extends Component {
                 <div className="input-group">
                     <input type="text" className="form-control" placeholder="Search Field" aria-describedby="search-addon" />
                     <span className="input-group-addon" id="search-addon">TODO: SEARCH BUTTON ICON</span>
+                    <span className="input-group-addon" id="Add">Add Something</span>
                 </div>
 
                 <div className="row citizen-list">

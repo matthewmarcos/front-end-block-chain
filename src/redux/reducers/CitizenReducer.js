@@ -19,7 +19,7 @@ export const CitizenReducer = (state = InitialState, action) => {
         }
         break;
         case 'FETCHED_ALL_CITIZENS': {
-            const citizens = action.payload;
+            const { citizens } = action.payload;
 
             return {
                 ...state,
