@@ -8,14 +8,19 @@ class AgencyContainer extends Component {
     render () {
         return (
             <div className="container">
-                <h1>{ this.props.user }</h1>
-                <button type="button" className="btn btn-primary" id="modal-trigger" data-toggle="modal" data-target="#modal-target">
-                    TODO OPEN SETTINGS
-                </button>
-                <div className="input-group">
-                    <input type="text" className="form-control" placeholder="Search Field" aria-describedby="search-addon" />
-                    <button className="input-group-addon" id="search-addon">TODO: SEARCH BUTTON ICON</button>
-                    <button className="input-group-addon" id="modal-trigger-add-citizen" data-toggle="modal" data-target="#modal-target-add-citizen">Add Something</button>
+                <div className="row">
+                    <h1 className="col col-sm-10">{ this.props.user }</h1>
+                    <button type="button" className="btn btn-primary" id="modal-trigger" data-toggle="modal" data-target="#modal-target">
+                        TODO OPEN SETTINGS
+                    </button>
+                </div>
+
+                <div className="row">
+                    <div className="input-group">
+                        <input type="text" className="form-control" placeholder="Search Field" aria-describedby="search-addon" />
+                        <button className="input-group-addon" id="search-addon">TODO: SEARCH BUTTON ICON</button>
+                        <button className="input-group-addon" id="modal-trigger-add-citizen" data-toggle="modal" data-target="#modal-target-add-citizen">Add Something</button>
+                    </div>
                 </div>
 
                 <div className="row citizen-list">
