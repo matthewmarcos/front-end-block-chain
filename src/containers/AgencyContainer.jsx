@@ -20,9 +20,10 @@ class AgencyContainer extends Component {
 
                 <div className="row citizen-list">
                     {
-                        this.props.citizen.citizens.map(x => {
+                        this.props.citizen.citizens.map((x, yhh) => {
                             return (
                                 <CitizenCard
+                                    key={yhh}
                                     firstName={x.firstName}
                                     middleName={x.middleName}
                                     lastName={x.lastName}
