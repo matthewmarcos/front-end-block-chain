@@ -27,13 +27,13 @@ class AgencyContainer extends Component {
                 </div>
 
                 <div className="row">
-                    <div className="input-group">
-                        <form onSubmit={this.fetchCitizens.bind(this)}>
+                    <form onSubmit={this.fetchCitizens.bind(this)}>
+                        <div className="form-group">
                             <input type="text" className="form-control" placeholder="Search Field" aria-describedby="search-addon" />
                             <button name="filter" className="input-group-addon" id="search-addon">TODO: SEARCH BUTTON ICON</button>
-                        </form>
-                        <button className="input-group-addon" id="modal-trigger-add-citizen" data-toggle="modal" data-target="#modal-target-add-citizen">Add Something</button>
-                    </div>
+                            <button className="input-group-addon" id="modal-trigger-add-citizen" data-toggle="modal" data-target="#modal-target-add-citizen">Add Something</button>
+                        </div>
+                    </form>
                 </div>
 
                 <div className="row citizen-list">

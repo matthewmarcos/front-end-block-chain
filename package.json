@@ -1,7 +1,7 @@
 {
   "name": "front-end-block-chain",
   "version": "0.1.0",
-  "proxy": "http://192.168.43.101:3000/api",
+  "proxy": "http://10.10.0.121:3000/api",
   "private": true,
   "dependencies": {
     "async": "^2.6.0",
