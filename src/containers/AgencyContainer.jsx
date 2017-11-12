@@ -20,14 +20,14 @@ class AgencyContainer extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    <h1 className="col col-sm-10">{ this.props.user || '' }</h1>
+                    <h1 className="agency-name col col-sm-10">{ this.props.user || '' }</h1>
                     {/*<button type="button" className="btn btn-primary" id="modal-trigger" data-toggle="modal" data-target="#modal-target">
                         TODO OPEN SETTINGS
                     </button>*/}
                 </div>
 
                 <div className="row">
-                    <h3 className="col col-sm-10">List of Citizens</h3>
+                    <h3 className="citizen-list col col-sm-10">List of Citizens</h3>
                     {/*<form onSubmit={this.fetchCitizens.bind(this)}>
                         <div className="form-group">
                             <input type="text" className="form-control" placeholder="Search Field" aria-describedby="search-addon" />
