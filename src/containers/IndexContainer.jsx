@@ -18,19 +18,19 @@ class IndexContainer extends Component {
 
     render() {
         return (
-            <div className="container">
-                <div className="card">
+            <div className="login-container container">
+                <div className="login-card card">
                     <div className="card-body">
                         <h4 className="card-title">Login</h4>
                         <form onSubmit={this.login.bind(this)}>
                             <div className="form-group">
-                                <label htmlFor="username">Username</label>
-                                <input name="username" type="text" className="form-control" id="username" placeholder="Enter username" />
+                                <label htmlFor="username"><b>AGENCY NAME</b></label>
+                                <input name="username" type="text" className="form-control" id="username" placeholder="Enter agency" />
                             </div>
-                            <div className="form-group">
+                            {/*<div className="form-group">
                                 <label htmlFor="password">Password</label>
                                 <input type="password" className="form-control" id="password" placeholder="Enter password" />
-                            </div>
+                            </div>*/}
                             <input className="btn btn-primary" type="submit" value="Login"/>
                         </form>
                     </div>

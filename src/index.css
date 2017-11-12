@@ -7,7 +7,7 @@ body {
 }
 
 nav {
-  background-color: rgba(230, 230, 230, 1);
+  background-color: rgba(20, 20, 60, 1);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);  
 
   margin-bottom: 30px;
@@ -25,17 +25,51 @@ nav a {
 
 nav p {
   margin-bottom: 0px;
+  color: white;
+}
+
+.login-card {
+  background-color: rgba(50, 50, 150, 1);
+  padding: 50px;
+  color: white;
+
+  position: relative;
+  top: 150px;
+  left: 250px;
+  margin-left: 500px;
+  margin-right: 500px; 
 }
 
 .card {
   margin-left: 50px;
-  margin-top: 5px;
+  margin-top: 20px;
   margin-bottom: 10px;
   overflow: hidden;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -webkit-transition: .25s box-shadow;
   transition: .25s box-shadow;
   border-radius: 0px;
+  background-color: rgb(245, 255, 245);
+}
+
+.card-header {
+  position: absolute;
+
+  left: 0px;
+  padding: 0px;
+
+  width: 100%;
+
+  background-color: rgb(20, 20, 100);
+  color: white;
+}
+
+.card-header h3 {
+  padding: 15px;
+}
+
+.card-body {
+  margin-top: 60px;
 }
 
 .card:focus, .card:hover {

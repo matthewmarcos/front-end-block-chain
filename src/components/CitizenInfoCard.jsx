@@ -6,6 +6,9 @@ class CitizenInfoCard extends Component {
     render () {
         return (
             <div className="card col-sm-3">
+                <div className="card-header">
+                    <h3>{this.props.firstName} {this.props.middleName} {this.props.lastName}</h3>
+                </div>    
                 <div className="card-body">
                     {/*<form action="/api/Citizen" method="PUT">
                         <input className="btn btn-primary" type="submit" value="TODO: EDIT BUTTON ICON"/>
