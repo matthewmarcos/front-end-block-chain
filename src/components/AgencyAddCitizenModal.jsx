@@ -23,48 +23,39 @@ class AgencySettingsModal extends Component {
 }
 
 class Form extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: {
-                id: '',
-                firstName: '',
-                middleName: '',
-                lastName: ''
-            }
-        };
+    createCitizen(e) {
+        e.preventDefault();
+        const citizen_id = e.target.citizen_id.value;
+        const citizen_first_name = e.target.citizen_first_name.value;
+        const citizen_middle_name = e.target.citizen_middle_name.value;
+        const citizen_last_name = e.target.citizen_last_name.value;
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
-
-    handleSubmit(event) {
-        event.preventDefault();
+        const { dispatch } = this.props;
+        if(citizen_id && citizen_first_name && citizen_middle_name && citizen_last_name) { //shitty form valcitizen_nameation
+            console.log(citizen_id, citizen_first_name, citizen_middle_name, citizen_last_name)
+            dispatch(createCitizen(citizen_id, citizen_first_name, citizen_middle_name, citizen_last_name));
+        }
     }
 
     render () {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.createCitizen.bind(this)}>
                 <div className="modal-body">
                     <div className="form-group">
                         <label htmlFor="citizen-id">ID</label>
-                        <input type="text" className="form-control" id="citizen-id" placeholder="Enter Citizen ID" value={this.state.value.id} onChange={this.handleChange} />
+                        <input name="citizen_id" type="text" className="form-control" id="citizen-id" placeholder="Enter Citizen ID" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="citizen-first-name">First Name</label>
-                        <input type="text" className="form-control" id="citizen-first-name" placeholder="Enter Citizen First Name" value={this.state.value.firstName} onChange={this.handleChange}/>
+                        <input name="citizen_first_name" type="text" className="form-control" id="citizen-first-name" placeholder="Enter Citizen First Name" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="citizen-middle-name">Middle Name</label>
-                        <input type="text" className="form-control" id="citizen-middle-name" placeholder="Enter Citizen Middle Name" value={this.state.value.middleName} onChange={this.handleChange}/>
+                        <input name="citizen_middle_name" type="text" className="form-control" id="citizen-middle-name" placeholder="Enter Citizen Middle Name" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="citizen-last-name">Last Name</label>
-                        <input type="text" className="form-control" id="citizen-last-name" placeholder="Enter Citizen Last Name" value={this.state.value.lastName} onChange={this.handleChange}/>
+                        <input name="citizen_last_name" type="text" className="form-control" id="citizen-last-name" placeholder="Enter Citizen Last Name" />
                     </div>
                 </div>
                 <div className="modal-footer">

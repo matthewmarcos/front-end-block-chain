@@ -22,7 +22,7 @@ class App extends Component {
                         <nav className="navbar navbar-default">
                             <div className="nav-container">
                                 <div className="navbar-header">
-                                    <a className="navbar-brand" href="#">
+                                    <a className="navbar-brand" href="/">
                                         <span>PROJECT NARRA</span>
                                     </a>
                                     <p className="navbar-text">Government Transactions</p>

@@ -38,38 +38,28 @@ class AgencySettingsModal extends Component {
 }
 
 class AddFieldForm extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: {
-                fieldMetaDataKey: '',
-                type: '',
-                owner: '',
-            }
-        };
+    createField(e) {
+        e.preventDefault();
+        const field_key = e.target.field_key.value;
+        const field_type = e.target.field_type.value;
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
-
-    handleSubmit(event) {
-        event.preventDefault();
+        const { dispatch } = this.props;
+        if(field_key && field_type) { //shitty form valfield_keyation
+            console.log(field_key, field_type)
+            dispatch(createField(field_key, field_type));
+        }
     }
 
     render () {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.createField.bind(this)}>
                 <div className="form-group">
                     <label htmlFor="field-metadata">Field Metadata Key</label>
-                    <input type="text" className="form-control" id="field-metadata" placeholder="Enter Field Metadata Key" value={this.state.value.id} onChange={this.handleChange} />
+                    <input name="field_key" type="text" className="form-control" id="field-metadata" placeholder="Enter Field Metadata Key"/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="field-type">Field Type</label>
-                    <input type="text" className="form-control" id="field-type" placeholder="Enter Field Type" value={this.state.value.id} onChange={this.handleChange} />
+                    <input name="field_type" type="text" className="form-control" id="field-type" placeholder="Enter Field Type"/>
                 </div>
                 <input type="submit" className="btn btn-primary" value="Add Field" />
             </form>
@@ -78,38 +68,28 @@ class AddFieldForm extends Component {
 }
 
 class ShareFieldForm extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: {
-                field: '',
-                agency: '',
-            }
-        };
+    setFieldPermission(e) {
+        e.preventDefault();
+        const field_key = e.target.field_key.value;
+        const agency_name = e.target.agency_name.value;
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
-
-    handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
-        event.preventDefault();
+        const { dispatch } = this.props;
+        if(field_key && agency_name) { //shitty form valfield_keyation
+            console.log(field_key, agency_name)
+            dispatch(setFieldPermission(field_key, agency_name));
+        }
     }
 
     render () {
         return(
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.setFieldPermission.bind(this)}>
                 <div className="form-group">
                     <label htmlFor="field-metadata-key">Field Metadata Key</label>
-                    <input type="text" className="form-control" id="field-metadata-key" placeholder="Enter Field Metadata Key to Share" value={this.state.value.field} onChange={this.handleChange} />
+                    <input name="field_key" type="text" className="form-control" id="field-metadata-key" placeholder="Enter Field Metadata Key to Share" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="agency-name">Agency Name</label>
-                    <input type="text" className="form-control" id="agency-name" placeholder="Enter Agency Name" value={this.state.value.agency} onChange={this.handleChange} />
+                    <input name="agency_name" type="text" className="form-control" id="agency-name" placeholder="Enter Agency Name" />
                 </div>
                 <input type="submit" className="btn btn-primary" value="Share Field" />
             </form>
