@@ -13,32 +13,65 @@ class AgencySettingsModal extends Component {
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div className="modal-body">
-                                <div className="form-group">
-                                    <label htmlFor="citizen-id">ID</label>
-                                    <input type="text" className="form-control" id="citizen-id" placeholder="Enter Citizen ID" />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="citizen-first-name">First Name</label>
-                                    <input type="text" className="form-control" id="citizen-first-name" placeholder="Enter Citizen First Name" />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="citizen-middle-name">Middle Name</label>
-                                    <input type="text" className="form-control" id="citizen-middle-name" placeholder="Enter Citizen First Name" />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="citizen-last-name">Last Name</label>
-                                    <input type="text" className="form-control" id="citizen-last-name" placeholder="Enter Citizen First Name" />
-                                </div>
-                            </div>
-                            <div className="modal-footer">
-                                <button type="button" className="btn btn-primary">Save changes</button>
-                                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
+                            <Form />
                         </div>
                     </div>
                 </div>
             </div>
+        )
+    }
+}
+
+class Form extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: {
+                id: '',
+                firstName: '',
+                middleName: '',
+                lastName: ''
+            }
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({value: event.target.value});
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+    }
+
+    render () {
+        return (
+            <form onSubmit={this.handleSubmit}>
+                <div className="modal-body">
+                    <div className="form-group">
+                        <label htmlFor="citizen-id">ID</label>
+                        <input type="text" className="form-control" id="citizen-id" placeholder="Enter Citizen ID" value={this.state.value.id} onChange={this.handleChange} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="citizen-first-name">First Name</label>
+                        <input type="text" className="form-control" id="citizen-first-name" placeholder="Enter Citizen First Name" value={this.state.value.firstName} onChange={this.handleChange}/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="citizen-middle-name">Middle Name</label>
+                        <input type="text" className="form-control" id="citizen-middle-name" placeholder="Enter Citizen Middle Name" value={this.state.value.middleName} onChange={this.handleChange}/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="citizen-last-name">Last Name</label>
+                        <input type="text" className="form-control" id="citizen-last-name" placeholder="Enter Citizen Last Name" value={this.state.value.lastName} onChange={this.handleChange}/>
+                    </div>
+                </div>
+                <div className="modal-footer">
+                    <input type="submit" className="btn btn-primary" value="Save changes" />
+                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </form>
         )
     }
 }

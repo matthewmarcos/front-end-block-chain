@@ -25,7 +25,7 @@ class App extends Component {
                                     <a className="navbar-brand" href="#">
                                         <span>PROJECT NARRA</span>
                                     </a>
-                                    <p class="navbar-text">Government Transactions</p>
+                                    <p className="navbar-text">Government Transactions</p>
                                 </div>
                             </div>
                         </nav>
