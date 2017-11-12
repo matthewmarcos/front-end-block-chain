@@ -41,14 +41,13 @@ nav p {
   color: white;
 
   position: relative;
-  top: 150px;
-  left: 250px;
-  margin-left: 500px;
-  margin-right: 500px; 
+   top: 130px; 
+  margin-left: 400px;
+  margin-right: 400px; 
 }
 
-.card {
-  margin-left: 50px;
+.citizen-card.card {
+  margin-right: 50px;
   margin-top: 20px;
   margin-bottom: 10px;
   overflow: hidden;
@@ -79,7 +78,7 @@ nav p {
   padding-bottom: 15px;
 }
 
-.card-body {
+.citizen-card .card-body {
   margin-top: 60px;
 }
 
