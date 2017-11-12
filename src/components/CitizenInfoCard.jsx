@@ -7,9 +7,9 @@ class CitizenInfoCard extends Component {
         return (
             <div className="card col-sm-4">
                 <div className="card-body">
-                    <form action="/api/Citizen" method="PUT">
+                    {/*<form action="/api/Citizen" method="PUT">
                         <input className="btn btn-primary" type="submit" value="TODO: EDIT BUTTON ICON"/>
-                    </form>
+                    </form>*/}
                     <table className="table">
                         <tbody>
                             <tr>
