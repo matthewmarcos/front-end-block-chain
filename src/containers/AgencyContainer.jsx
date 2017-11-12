@@ -30,7 +30,7 @@ class AgencyContainer extends Component {
                     <div className="input-group">
                         <form onSubmit={this.fetchCitizens.bind(this)}>
                             <input type="text" className="form-control" placeholder="Search Field" aria-describedby="search-addon" />
-                            <input name="filter" className="input-group-addon" id="search-addon" value="TODO: SEARCH BUTTON ICON" />
+                            <button name="filter" className="input-group-addon" id="search-addon">TODO: SEARCH BUTTON ICON</button>
                         </form>
                         <button className="input-group-addon" id="modal-trigger-add-citizen" data-toggle="modal" data-target="#modal-target-add-citizen">Add Something</button>
                     </div>
