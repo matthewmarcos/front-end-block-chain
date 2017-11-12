@@ -46,7 +46,7 @@ class AddFieldForm extends Component {
         const { dispatch } = this.props;
         if(field_key && field_type) { //shitty form valfield_keyation
             console.log(field_key, field_type)
-            dispatch(createField(field_key, field_type));
+            // dispatch(createField(field_key, field_type));
         }
     }
 
@@ -76,7 +76,7 @@ class ShareFieldForm extends Component {
         const { dispatch } = this.props;
         if(field_key && agency_name) { //shitty form valfield_keyation
             console.log(field_key, agency_name)
-            dispatch(setFieldPermission(field_key, agency_name));
+            // dispatch(setFieldPermission(field_key, agency_name));
         }
     }
 

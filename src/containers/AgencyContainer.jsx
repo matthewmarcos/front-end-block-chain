@@ -5,14 +5,14 @@ import AgencyModal from '../components/AgencySettingsModal';
 import AgencyAddCitizenModal from '../components/AgencyAddCitizenModal';
 
 class AgencyContainer extends Component {
-    filterCitizen(e) {
+    fetchCitizens(e) {
         e.preventDefault();
         const filter = e.target.filter.value;
 
         const { dispatch } = this.props;
         if(filter) { //shitty form valfilteration
             console.log(filter)
-            dispatch(filterCitizen(filter));
+            // dispatch(fetchCitizens(filter));
         }
     }
 
@@ -28,7 +28,7 @@ class AgencyContainer extends Component {
 
                 <div className="row">
                     <div className="input-group">
-                        <form onSubmit={this.filterCitizen.bind(this)}>
+                        <form onSubmit={this.fetchCitizens.bind(this)}>
                             <input type="text" className="form-control" placeholder="Search Field" aria-describedby="search-addon" />
                             <input name="filter" className="input-group-addon" id="search-addon" value="TODO: SEARCH BUTTON ICON" />
                         </form>

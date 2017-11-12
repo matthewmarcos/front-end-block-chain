@@ -33,7 +33,7 @@ class Form extends Component {
         const { dispatch } = this.props;
         if(citizen_id && citizen_first_name && citizen_middle_name && citizen_last_name) { //shitty form valcitizen_nameation
             console.log(citizen_id, citizen_first_name, citizen_middle_name, citizen_last_name)
-            dispatch(createCitizen(citizen_id, citizen_first_name, citizen_middle_name, citizen_last_name));
+            // dispatch(createCitizen(citizen_id, citizen_first_name, citizen_middle_name, citizen_last_name));
         }
     }
 

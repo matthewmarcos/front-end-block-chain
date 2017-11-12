@@ -14,7 +14,7 @@ class AdminContainer extends Component {
         const { dispatch } = this.props;
         if(id && name) { //shitty form validation
             console.log(id, name)
-            dispatch(createAgency(id, name));
+            // dispatch(createAgency(id, name));
         }
     }
 
