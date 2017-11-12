@@ -8,6 +8,7 @@ import IndexContainer from './containers/IndexContainer';
 import PapaContainer from './containers/PapaContainer';
 import NotFound from './containers/404';
 import { Provider } from 'react-redux';
+import logo from './logo.png';
 
 class App extends Component {
     componentDidMount() {
@@ -23,9 +24,9 @@ class App extends Component {
                             <div className="nav-container">
                                 <div className="navbar-header">
                                     <a className="navbar-brand" href="/">
-                                        <span>PROJECT NARRA</span>
+                                        <img src={logo} />
                                     </a>
-                                    <p className="navbar-text">Government Transactions</p>
+                                    <p className="navbar-text">Project Narra</p>
                                 </div>
                             </div>
                         </nav>
