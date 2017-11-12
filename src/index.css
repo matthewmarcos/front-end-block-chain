@@ -63,12 +63,11 @@ nav p {
 }
 
 .card-header {
-  position: absolute;
-
   left: 0px;
   padding: 0px;
+  margin-left: -15px;
 
-  width: 100%;
+  width: calc(100% + 30px);
 
   background-color: rgb(20, 20, 100);
   color: white;
@@ -80,10 +79,6 @@ nav p {
   padding-right: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
-}
-
-.citizen-card .card-body {
-  margin-top: 60px;
 }
 
 .card:focus, .card:hover {
